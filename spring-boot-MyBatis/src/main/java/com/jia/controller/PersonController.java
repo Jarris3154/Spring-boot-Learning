@@ -23,21 +23,22 @@ public class PersonController {
         return personService.findAll();
     }
 
-    @RequestMapping("/likeName")
-    public List<Person> likeName(String name) {
+    @RequestMapping(value="/likeName/{name}", method=RequestMethod.GET)
+    public List<Person> likeName(@PathVariable String name) {
         return personService.likeName(name);
     }
 
-    @RequestMapping("/{id}")
+    @RequestMapping(value="/{id}", method=RequestMethod.GET)
     public Person getById(@PathVariable int id) {
         return personService.getById(id);
     }
 
-    @RequestMapping("{id}/getName")
+    @RequestMapping(value="{id}/getName", method=RequestMethod.GET)
     public String getNameById(@PathVariable int id) {
         return personService.getNameById(id);
     }
 
+    //test ErrorHandler
     @RequestMapping("/error")
     public void error() throws Exception {
         throw new Exception("heal the error automaticlly");
