@@ -3,7 +3,6 @@ package com.jia.controller;
 import com.jia.model.Person;
 import com.jia.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.repository.query.Param;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,7 +20,7 @@ public class PersonController {
     }
 
     //使用Hibernate规则首字母大写来查询
-    @RequestMapping("/:name")
+    @RequestMapping("/{name}")
     public Iterable<Person> findByName(@PathVariable String name) {
         return personService.findByName(name);
     }
