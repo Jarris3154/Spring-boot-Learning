@@ -6,9 +6,10 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.Properties;
 
+@Configuration
 public class MyBatisConfiguration {
 
-
+    @Bean
     public PageHelper getPageHelper(){
         System.out.println("MyBatisConfiguration.getPageHelper");
         PageHelper pageHelper=new PageHelper();

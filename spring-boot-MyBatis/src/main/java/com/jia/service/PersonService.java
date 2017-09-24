@@ -30,6 +30,7 @@ public class PersonService {
         return personDao.getById(id);
     }
 
+    @Transactional
     public void save(Person person){
         personDao.save(person);
     }

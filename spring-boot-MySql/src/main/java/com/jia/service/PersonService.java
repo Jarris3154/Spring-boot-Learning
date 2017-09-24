@@ -13,7 +13,7 @@ public class PersonService {
     @Autowired
     private PersonDao personDao;
 
-    public Iterable<Person> findALl(){
+    public Iterable<Person> findAll(){
         return personDao.findAll();
     }
     public Iterable<Person> findByName(String name){
@@ -28,7 +28,7 @@ public class PersonService {
         return personDao.save(person);
     }
     @Transactional
-    public void delete(int id){
-        personDao.delete(id);
+    public void deleteById(int id){
+        personDao.deleteById(id);
     }
 }

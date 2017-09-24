@@ -36,7 +36,7 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-    </dependencies>
+    <!--</dependencies>-->
     <build>
         <finalName>spring-boot-mysql</finalName>
         <plugins>

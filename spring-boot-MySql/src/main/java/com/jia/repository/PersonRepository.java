@@ -14,7 +14,7 @@ public interface PersonRepository extends CrudRepository<Person, Integer> {
 
     Person save(Person person);
 
-    Person delete(int id);
+    void deleteById(int id);
 
     Iterable<Person> findByName(String name);
 

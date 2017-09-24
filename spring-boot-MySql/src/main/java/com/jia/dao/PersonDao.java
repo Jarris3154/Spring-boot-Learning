@@ -20,8 +20,8 @@ public class PersonDao {
         return personRepository.save(person);
     }
 
-    public void delete(int id) {
-        personRepository.delete(id);
+    public void deleteById(int id) {
+        personRepository.deleteById(id);
     }
 
     public Iterable<Person> findByName(String name){

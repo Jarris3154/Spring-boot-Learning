@@ -14,12 +14,12 @@ import javax.servlet.http.HttpServletRequest;
  * 4. 如果返回的是数据，则加入@ResponseBody注解
  *
  */
-@ControllerAdvice
+//@ControllerAdvice
 public class GlobalExceptionHandler {
 
     private static final String ERROR_MESSAGE="服务器繁忙，请稍后再试";
 
-    @ExceptionHandler(Exception.class)
+    //@ExceptionHandler(Exception.class)
     @ResponseBody
     public String defaultExceptionHandle(HttpServletRequest req, Exception e){
         return "对不起，服务器繁忙，请稍后再试";

@@ -13,7 +13,7 @@ public interface PersonMapper {
     List<Person> findAll();
 
     //#{name}:参数占位符
-    @Select("select * from Person where name=#{name}")
+    @Select("select * from Person where name like CONCAT(CONCAT('%', #{name}), '%')")
     List<Person> likeName(String name);
 
     @Select("select * from Person where id=#{id}")
