@@ -1,8 +1,6 @@
-# spring-boot-mysql
+# 在springboot中配置JPA for mysql
 
-    ## 在springboot中配置JPA for mysql
-
-    1. 首先在POM中引入相关依赖
+### 在POM中引入的相关依赖
 ``` java
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -25,5 +23,5 @@
     <artifactId>mysql-connector-java</artifactId>
     </dependency>
 ```
-        2.
+
 
