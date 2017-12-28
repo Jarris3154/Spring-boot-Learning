@@ -4,6 +4,10 @@
     <title>Hello World!</title>
 </head>
 <body>
-<h1>Hello world! </h1>
+<h1 >Hello ${Session.SPRING_SECURITY_CONTEXT.authentication.principal.username!'xxx'}!</h1>
+
+<form action="/logout" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
 </body>
 </html>
