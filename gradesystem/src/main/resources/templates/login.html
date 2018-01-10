@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login</title>
+<body>
+<h1>登录</h1>
+<form action="/login/checkLogin">
+    <table>
+        <tr>
+            <th><label for="username">用户名： </label></th>
+            <td><input type="text" id="username" name="username" placeholder="输入用户名"></td>${message!''}
+        </tr>
+        <tr>
+            <th><label for="password">密 码： </label></th>
+            <td><input type="text" id="password" name="password" placeholder="输入密码"></td>
+        </tr>
+        <tr>
+            <th><label for="role">权 限： </label></th>
+            <td>
+                <select name="role" id="role">
+                    <option value="">请选择权限：</option>
+                    <option value="管理员">管理员</option>
+                    <option value="教师">教师</option>
+                    <option value="学生">学生</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><input type="submit" value="登录"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
