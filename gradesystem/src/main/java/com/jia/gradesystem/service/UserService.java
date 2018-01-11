@@ -7,6 +7,8 @@ import com.jia.gradesystem.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class UserService {
@@ -24,5 +26,12 @@ public class UserService {
             return LoginResponse.Success;
         }
         return LoginResponse.Fail;
+    }
+    public List<User> findAll(){
+        return userRepository.findAll();
+    }
+
+    public User create(User user){
+        return userRepository.insert(user);
     }
 }
