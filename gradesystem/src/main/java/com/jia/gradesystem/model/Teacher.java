@@ -3,23 +3,44 @@ package com.jia.gradesystem.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Document(collection = "teachers")
 public class Teacher {
 
     @Id
-    private String _id;
+    private String id;
+    private int number;
     private String name;
     private Gender gender;
     private int age;
     private String jobTitle;
     private String phoneNumber;
+    private List<Course> courseList= new ArrayList<>();
+
+    public List<Course> getCourseList() {
+        return courseList;
+    }
+
+    public void setCourseList(List<Course> courseList) {
+        this.courseList = courseList;
+    }
 
     public String getId() {
-        return _id;
+        return id;
     }
 
     public void setId(String id) {
-        this._id = id;
+        this.id = id;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
     }
 
     public String getName() {
